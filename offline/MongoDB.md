@@ -51,7 +51,7 @@
             {
                 user: "yulongbb",
                 pwd: "eszrdxtfc",
-                roles: [ 
+                roles: [
                     { role: "root", db: "admin" },
                 ]
             }
