@@ -36,7 +36,6 @@
 6. 修改mysql root 密码
 
     * 查询临时密码 `grep 'temporary password' /var/log/mysqld.log`
-
     * 设置新密码
 
         ```shell
@@ -47,15 +46,10 @@
 7. 创建新用户并开启远程登陆
 
     * 创建用户 `create user 'user'@'%' identified by 'password';`
-
     * 授权 `grant all privileges on *.* to 'user'@'%';`
-
     * 开启3306端口 `firewall-cmd --zone=public --add-port=3306/tcp --permanent`
-
     * 重启防火墙 `firewall-cmd –-reload`
-
     * 查看端口号3306是否开启 `firewall-cmd --query-port=3306/tcp`
-
     * 查询开启端口列表 `firewall-cmd --list-port`
 
 8. 配置默认编码为UTF-8
