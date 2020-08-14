@@ -49,7 +49,7 @@
 
 7. 安装 `make install`
 
-8. 防火墙 
+8. 防火墙
 
     * 关闭防火墙 `systemctl stop firewalld.service`
     * 禁止开机启动 `systemctl disable firewalld.service`
@@ -64,4 +64,3 @@
 12. 停止 `/usr/local/nginx/sbin/nginx -s stop`
 
 13. 重启 `/usr/local/nginx/sbin/nginx -s reload`
-
