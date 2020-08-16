@@ -53,7 +53,7 @@
     * 编辑配置文件 `vi /etc/fdfs/storage.conf`
 
         ```shell
-        group_name=group1
+        group_name=storagegroup
         base_path=/opt/fastdfs/storage/data-and-log
         store_path0=/opt/fastdfs/storage/images-data
         tracker_server= 192.168.99.106:22122
@@ -75,7 +75,7 @@
         ```
 
     * 上传图片 `/usr/bin/fdfs_test /etc/fdfs/client.conf upload /opt/test.jpg`
-    * 查看图片地址 `http://192.168.99.106/group1/M00/00/00/wKhjal3SjIuAVBa9AAj4Ya88lJ0199_big.jpg`
+    * 查看图片地址 `http://192.168.99.106/storagegroup/M00/00/00/wKhjal3SjIuAVBa9AAj4Ya88lJ0199_big.jpg`
 
 7. 安装 fastdfs-nginx-module_v1.16.tar.gz
 
@@ -125,7 +125,7 @@
 
         ```shell
         base_path=/opt/fastdfs/fastdfs-nginx-module/data-and-log
-        group_name=group1
+        group_name=storagegroup
         url_have_group_name = true
         tracker_server=192.168.99.106:22122
         store_path0=/opt/fastdfs/storage/images-data
@@ -138,7 +138,7 @@
         server {
             listen 80;
             server_name  192.168.99.106;
-                location /group1/M00 {
+                location /storagegroup/M00 {
                     ngx_fastdfs_module;
                 }
         }
