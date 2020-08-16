@@ -16,14 +16,14 @@
     * 在配置文件的末尾处添加以下内容
 
     ``` shell
-        JAVA_HOME=/usr/program/jdk1.8.0_72
-        JRE_HOME=$JAVA_HOME/jre
-        PATH=$PATH:$JAVA_HOME/bin
-        CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-        export JAVA_HOME
-        export JRE_HOME
-        export PATH
-        export CLASSPATH
+    JAVA_HOME=/usr/program/jdk1.8.0_72
+    JRE_HOME=$JAVA_HOME/jre
+    PATH=$PATH:$JAVA_HOME/bin
+    CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+    export JAVA_HOME
+    export JRE_HOME
+    export PATH
+    export CLASSPATH
     ```
 
 7. 激活配置 `source /etc/profile`
