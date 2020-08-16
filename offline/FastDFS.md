@@ -133,15 +133,15 @@
 
     * 编辑nginx配置文件
 
-    ```shell
-    user  root;
-    server {
-        listen 80;
-        server_name  192.168.99.106;
-            location /group1/M00 {
-                ngx_fastdfs_module;
-            }
-    }
-    ```
+        ```shell
+        user  root;
+        server {
+            listen 80;
+            server_name  192.168.99.106;
+                location /group1/M00 {
+                    ngx_fastdfs_module;
+                }
+        }
+        ```
 
     * 重启 `/usr/local/nginx/sbin/nginx -s reload`
