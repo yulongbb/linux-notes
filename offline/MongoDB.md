@@ -33,6 +33,8 @@
     logappend=true
     port=27017
     fork=true
+    auth=true
+    bind_ip = 0.0.0.0
     ```
 
 9. 查看mongo是否在运行 `ps -ef | grep mongo`
@@ -55,11 +57,4 @@
             ]
         }
     )
-    ```
-
-14. 修改配置文件，允许远程连接 `vi /etc/mongodb.conf`
-
-    ```shell
-    auth=true
-    bind_ip = 0.0.0.0
     ```
