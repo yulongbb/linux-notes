@@ -19,9 +19,9 @@
 
 2. 防火墙
 
+    * 查看防火墙状态 firewall-cmd --state
     * 关闭防火墙 systemctl stop firewalld.service
     * 禁止开机启动 systemctl disable firewalld.service
-    * 查看防火墙状态 firewall-cmd --state
 
 ## 离线安装
 
