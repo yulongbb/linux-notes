@@ -5,6 +5,13 @@
 * 虚拟机：Oracle VM VirtualBox
 * 系统镜像：CentOS-7-x86_64-Minimal-1810.iso
 
+## 准备工作
+
+1. 创建文件夹
+
+   * 软件安装包 `/usr/setups`
+   * 软件目录 `/usr/program`
+
 ## 离线安装
 
 * [JDK](/offline/JDK.md)
