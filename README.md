@@ -43,3 +43,23 @@
 * [Neo4j](/migration/Neo4j.md)
 * [Redis](/offline/Redis.md)
 * [FastDFS](/migration/FastDFS.md)
+
+## Tips
+
+1. 鼠标脱离Virtual Box虚拟机窗口
+
+    按右ctrl即可
+
+2. Xshell工具中文乱码
+
+    * File -> Properties -> Terminal
+    * 将Encoding的值设置为Unicode(UTF-8)
+
+3. 通过Xshell工具连接Virtual Box虚拟机
+
+    * `vi /etc/sysconfig/network-scripts/ifcfg-enp0s3` 将ONBOOT的值改为yes。
+    * 关闭虚拟机，将网卡1设为网络地址转换（NAT）,实现悉尼及通过主机网络访问互联网，网卡2设置微host-only，实现主机与虚拟机互联，重启虚拟机。
+    * `yum update`
+    * `yum search ifconfig`
+    * `yum install net-tools.x86_64`
+    * ifconfig
