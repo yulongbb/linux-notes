@@ -12,6 +12,11 @@
    * 软件安装包 `/usr/setups`
    * 软件目录 `/usr/program`
 
+   ```shell
+    mkdir /usr/setups
+    mkdir /usr/program
+   ```
+
 ## 离线安装
 
 * [JDK](/offline/JDK.md)
