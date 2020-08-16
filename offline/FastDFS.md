@@ -15,10 +15,10 @@
     * 设置软连接
 
         ```shell
-            ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so
-            ln -s /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so
-            ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so
-            ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
+        ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so
+        ln -s /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so
+        ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so
+        ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
         ```
 
 6. 安装 tracker （跟踪器）服务 `FastDFS_v5.08.tar.gz`
@@ -36,7 +36,7 @@
     * 编辑配置文件 `vi /etc/fdfs/tracker.conf`
 
         ```shell
-            base_path=/opt/fastdfs/tracker/data-and-log
+        base_path=/opt/fastdfs/tracker/data-and-log
         ```
 
     * 启动 tracker 服务  `/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf`
@@ -49,17 +49,17 @@
     * 创建文件夹
 
         ```shell
-            mkdir -p /opt/fastdfs/storage/data-and-log
-            mkdir -p /opt/fastdfs/storage/images-data
+        mkdir -p /opt/fastdfs/storage/data-and-log
+        mkdir -p /opt/fastdfs/storage/images-data
         ```
 
     * 编辑配置文件 `vi /etc/fdfs/storage.conf`
 
         ```shell
-            group_name=group1
-            base_path=/opt/fastdfs/storage/data-and-log
-            store_path0=/opt/fastdfs/storage/images-data
-            tracker_server= 192.168.99.106:22122
+        group_name=group1
+        base_path=/opt/fastdfs/storage/data-and-log
+        store_path0=/opt/fastdfs/storage/images-data
+        tracker_server= 192.168.99.106:22122
         ```
 
     * 启动storage服务 `/usr/bin/fdfs_storaged /etc/fdfs/storage.conf`
@@ -73,8 +73,8 @@
     * 编辑 `vi /etc/fdfs/client.conf`
 
         ```shell
-            base_path=/opt/fastdfs/client/data-and-log
-            tracker_server=192.168.99.106:22122
+        base_path=/opt/fastdfs/client/data-and-log
+        tracker_server=192.168.99.106:22122
         ```
 
     * 上传图片 `/usr/bin/fdfs_test /etc/fdfs/client.conf upload /opt/test.jpg`
@@ -87,14 +87,14 @@
     * 编辑配置文件 `vi /usr/program/fastdfs-5.05/fastdfs-nginx-module/src/config`
 
         ```shell
-            CORE_INCS="$CORE_INCS /usr/include/fastdfs usr/include/fastcommon/"
+        CORE_INCS="$CORE_INCS /usr/include/fastdfs usr/include/fastcommon/"
         ```
 
     * 复制文件
 
         ```shell
-            cp /usr/program/fastdfs-5.05/conf/http.conf /etc/fdfs
-            cp /usr/program/fastdfs-5.05/conf/mime.types /etc/fdfs
+        cp /usr/program/fastdfs-5.05/conf/http.conf /etc/fdfs
+        cp /usr/program/fastdfs-5.05/conf/mime.types /etc/fdfs
         ```
 
 11. 安装 Nginx 和 Nginx 第三方模块
@@ -105,19 +105,19 @@
     * 编译配置
 
         ```shell
-            ./configure \
-            --prefix=/usr/local/nginx \
-            --pid-path=/var/local/nginx/nginx.pid \
-            --lock-path=/var/lock/nginx/nginx.lock \
-            --error-log-path=/var/log/nginx/error.log \
-            --http-log-path=/var/log/nginx/access.log \
-            --with-http_gzip_static_module \
-            --http-client-body-temp-path=/var/temp/nginx/client \
-            --http-proxy-temp-path=/var/temp/nginx/proxy \
-            --http-fastcgi-temp-path=/var/temp/nginx/fastcgi \
-            --http-uwsgi-temp-path=/var/temp/nginx/uwsgi \
-            --http-scgi-temp-path=/var/temp/nginx/scgi \
-            --add-module=/usr/program/fastdfs-5.05/fastdfs-nginx-module/src
+        ./configure \
+        --prefix=/usr/local/nginx \
+        --pid-path=/var/local/nginx/nginx.pid \
+        --lock-path=/var/lock/nginx/nginx.lock \
+        --error-log-path=/var/log/nginx/error.log \
+        --http-log-path=/var/log/nginx/access.log \
+        --with-http_gzip_static_module \
+        --http-client-body-temp-path=/var/temp/nginx/client \
+        --http-proxy-temp-path=/var/temp/nginx/proxy \
+        --http-fastcgi-temp-path=/var/temp/nginx/fastcgi \
+        --http-uwsgi-temp-path=/var/temp/nginx/uwsgi \
+        --http-scgi-temp-path=/var/temp/nginx/scgi \
+        --add-module=/usr/program/fastdfs-5.05/fastdfs-nginx-module/src
         ```
 
     * 编译 `make`
@@ -127,24 +127,24 @@
     * 编辑配置文件 `vi /etc/fdfs/mod_fastdfs.conf`
 
         ```shell
-            base_path=/opt/fastdfs/fastdfs-nginx-module/data-and-log
-            group_name=group1
-            url_have_group_name = true
-            tracker_server=192.168.99.106:22122
-            store_path0=/opt/fastdfs/storage/images-data
+        base_path=/opt/fastdfs/fastdfs-nginx-module/data-and-log
+        group_name=group1
+        url_have_group_name = true
+        tracker_server=192.168.99.106:22122
+        store_path0=/opt/fastdfs/storage/images-data
         ```
 
     * 编辑nginx配置文件
 
     ```shell
-        user  root;
-        server {
-            listen 80;
-            server_name  192.168.99.106;
-                location /group1/M00 {
-                    ngx_fastdfs_module;
-                }
-        }
+    user  root;
+    server {
+        listen 80;
+        server_name  192.168.99.106;
+            location /group1/M00 {
+                ngx_fastdfs_module;
+            }
+    }
     ```
 
     * 重启 `/usr/local/nginx/sbin/nginx -s reload`
