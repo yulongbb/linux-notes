@@ -9,13 +9,19 @@
 
 1. 创建文件夹
 
-   * 软件安装包 `/usr/setups`
-   * 软件目录 `/usr/program`
+    * 软件安装包 `/usr/setups`
+    * 软件目录 `/usr/program`
 
-   ```shell
+    ```shell
     mkdir /usr/setups
     mkdir /usr/program
-   ```
+    ```
+
+2. 防火墙
+
+    * 关闭防火墙 systemctl stop firewalld.service
+    * 禁止开机启动 systemctl disable firewalld.service
+    * 查看防火墙状态 firewall-cmd --state
 
 ## 离线安装
 
