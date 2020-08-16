@@ -22,7 +22,6 @@
 8. 修改配置 `vi /etc/redis.conf`
 
     ```shell
-    requirepass eszrdxtfc
     bind 0.0.0.0
     daemonize yes
     ```
