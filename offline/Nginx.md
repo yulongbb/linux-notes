@@ -1,41 +1,6 @@
 # Nginx
 
-1. 安装依赖
-
-    * 安装gcc
-
-    ```shell
-        rpm -Uvh *.rpm --nodeps --force
-        gcc -v
-    ```
-
-    * 安装pcre
-
-    ```shell
-        rpm -ivh pcre-8.32-17.el7.x86_64.rpm --nodeps --force
-        rpm -ivh pcre-devel-8.32-17.el7.x86_64.rpm --nodeps --force
-    ```
-
-    * 安装libstdc++（gcc-c++依赖）
-
-    ```shell
-        rpm -ivh libstdc++-4.8.5-39.el7.x86_64.rpm --nodeps --force
-        rpm -ivh libstdc++-devel-4.8.5-39.el7.x86_64.rpm --nodeps --force
-    ```
-
-    * 安装gcc-c++
-
-    ```shell
-        rpm -ivh gcc-c++-4.8.5-39.el7.x86_64.rpm --nodeps --force
-
-    ```
-
-    * 安装zlib
-
-    ```shell
-        rpm -ivh zlib-1.2.7-18.el7.x86_64.rpm --nodeps --force
-        rpm -ivh zlib-devel-1.2.7-18.el7.x86_64.rpm --nodeps --force
-    ```
+1. 安装依赖 `rpm -Uvh *.rpm --nodeps --force`
 
 2. 解压安装包 `tar zxvf nginx-1.8.1.tar.gz`
 
