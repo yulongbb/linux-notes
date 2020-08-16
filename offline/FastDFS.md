@@ -18,7 +18,7 @@
         ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
         ```
 
-3. 安装 tracker （跟踪器）服务 `FastDFS_v5.08.tar.gz`
+3. 安装 tracker （跟踪器）服务 `FastDFS_v5.05.tar.gz`
 
     * 解压 `tar zxvf fastdfs-5.05.tar.gz`
     * 移动目录 `mv fastdfs-5.05/ /usr/program/fastdfs-5.05`
