@@ -63,3 +63,7 @@
     * `yum search ifconfig`
     * `yum install net-tools.x86_64`
     * ifconfig
+
+## 安装包文件请加我微信
+
+![微信二维码](/images/wechat.jpg)
