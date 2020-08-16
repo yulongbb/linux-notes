@@ -1,5 +1,10 @@
 # 运维手记
 
+## 测试环境
+
+* 虚拟机：Oracle VM VirtualBox
+* 系统镜像：CentOS-7-x86_64-Minimal-1810.iso
+
 ## 离线安装
 
 * [JDK](/offline/JDK.md)
