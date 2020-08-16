@@ -1,6 +1,6 @@
 # FastDFS
 
-1. 安装依赖 `rpm -Uvh *.rpm --nodeps –force`
+1. 安装依赖 `rpm -Uvh *.rpm --nodeps –-force`
 
 2. 安装 `libfastcommon-1.0.7.tar.gz`
 
