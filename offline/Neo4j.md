@@ -1,8 +1,8 @@
 # Neo4j
 
-1. 解压安装包 `tar zxvf neo4j-community-4.1.1-unix.tar.gz`
+1. 解压安装包 `tar zxvf neo4j-community-3.5.20-unix.tar.gz`
 
-2. 重命名 `mv  neo4j-community-4.1.1 neo4j`
+2. 重命名 `mv  neo4j-community-3.5.20 neo4j`
 
 3. 移动目录 `mv neo4j/ /usr/program/neo4j`
 
