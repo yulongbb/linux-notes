@@ -4,6 +4,8 @@
 
 * 虚拟机：Oracle VM VirtualBox
 * 系统镜像：CentOS-7-x86_64-Minimal-1810.iso
+* 软件版本
+
 
 ## 准备工作
 
@@ -77,6 +79,6 @@
     * `yum install net-tools.x86_64`
     * ifconfig
 
-## 安装包文件请加我微信
+## 离线安装包文件请加我微信
 
 ![微信二维码](/images/wechat.jpg)
