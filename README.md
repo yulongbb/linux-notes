@@ -6,6 +6,20 @@
 * 系统镜像：CentOS-7-x86_64-Minimal-1810.iso
 * 软件版本
 
+    <table class="table table-bordered table-striped table-condensed">  
+        <tr>  
+            <th>序号</th>  
+            <th>软件</th>  
+            <th>版本</th>  
+            <th>描述</th>  
+        </tr>  
+        <tr>  
+            <td>1</td>  
+            <td>JDK</td>
+            <td>1.8.0_72</td>
+            <td>JAVA运行环境</td>
+        </tr>
+    </table>
 
 ## 准备工作
 
