@@ -118,6 +118,7 @@
 * [RabbitMQ](/docker/RabbitMQ.md)
 * [Nacos](/docker/Nacos.md)
 * [ArangoDB](/docker/ArangoDB.md)
+* [Kibana](/docker/Kibana.md)
 
 ## 数据迁移
 
