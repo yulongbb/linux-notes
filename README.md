@@ -19,6 +19,60 @@
             <td>1.8.0_72</td>
             <td>JAVA运行环境</td>
         </tr>
+        <tr>  
+            <td>2</td>  
+            <td>Nginx</td>
+            <td>1.8.1</td>
+            <td>开源Web服务器和反向代理服务器</td>
+        </tr>
+        <tr>  
+            <td>3</td>  
+            <td>MongoDB</td>
+            <td>3.4.10</td>
+            <td>跨平台的面向文档的数据库</td>
+        </tr>
+        <tr>  
+            <td>4</td>  
+            <td>ElasticSearch</td>
+            <td>6.6.2</td>
+            <td>具有RESTful API的分布式，可伸缩且高度可用的实时搜索平台。</td>
+        </tr>
+        <tr>  
+            <td>5</td>  
+            <td>Neo4j</td>
+            <td>3.5.20</td>
+            <td>用Java实现的图形数据库</td>
+        </tr>
+        <tr>  
+            <td>6</td>  
+            <td>Redis</td>
+            <td>5.0.5</td>
+            <td>NoSQL数据库管理软件</td>
+        </tr>
+        <tr>  
+            <td>7</td>  
+            <td>FastDFS</td>
+            <td>5.05</td>
+            <td>轻量级分布式文件系统</td>
+        </tr>
+        <tr>  
+            <td>8</td>  
+            <td>RabbitMQ</td>
+            <td>3.7.3</td>
+            <td>开源消息代理</td>
+        </tr>
+        <tr>  
+            <td>9</td>  
+            <td>Nacos</td>
+            <td>1.3.2</td>
+            <td>动态服务发现、配置和服务管理平台</td>
+        </tr>
+        <tr>  
+            <td>10</td>  
+            <td>Docker</td>
+            <td>1.13.1</td>
+            <td>部署容器化应用程序的开源软件</td>
+        </tr>
     </table>
 
 ## 准备工作
