@@ -77,7 +77,33 @@
 
 ## 准备工作
 
-1. 创建文件夹
+1. 查看系统版本 `cat /etc/centos-release`
+
+2. 更换yum源
+
+    ```shell
+    yum -y install wget
+    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+    wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+    mv CentOS7-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo
+    yum clean all && yum makecache && yum -y update
+    ```
+
+3. 关闭防火墙
+
+    * 查看防火墙状态 `firewall-cmd --state`
+    * 关闭防火墙 `systemctl stop firewalld.service`
+    * 禁止开机启动 `systemctl disable firewalld.service`
+
+4. 关闭selinux
+
+    ```shell
+    setenforce 0
+    sed -i 's/enforcing/disabled/g' /etc/selinux/config
+    sed -i 's/enforcing/disabled/g' /etc/sysconfig/selinux
+    ```
+
+5. 创建文件夹
 
     * 软件安装包 `/usr/setups`
     * 软件目录 `/usr/program`
@@ -87,11 +113,25 @@
     mkdir /usr/program
     ```
 
-2. 防火墙
+6. 安装Docker
 
-    * 查看防火墙状态 `firewall-cmd --state`
-    * 关闭防火墙 `systemctl stop firewalld.service`
-    * 禁止开机启动 `systemctl disable firewalld.service`
+    ```shell
+    yum install docker -y
+    systemctl start docker
+    systemctl enable docker
+    systemctl status docker
+    docker version
+
+    echo {\"registry-mirrors\":[\"https://nr630v1c.mirror.aliyuncs.com\"]} > /etc/docker/daemon.json 
+    systemctl restart docker
+    ```
+
+7. 安装Docker-Compose
+
+    ```shell
+    sudo curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    ```
 
 ## 离线安装
 
